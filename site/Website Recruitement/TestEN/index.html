@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>IN SOLUTIONS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="main1.css">
+<link rel="stylesheet" href="Slider.css">
+<link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="modal1.css">
+<link rel="stylesheet" href="modal2.css">
+<link rel="stylesheet" href="modal3.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Career</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+   <!-- <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Demo<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Demo Link1</a>
+      <a href="#" class="w3-bar-item w3-button">Demo Link2</a>
+      <a href="#" class="w3-bar-item w3-button">Ad more to that side</a>
+    </div>
+    </div>-->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button" title="Notifications">Language<i class="fa fa-caret-down"></i></button>   
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="..\TestEN\marketing.html" class="w3-bar-item w3-button">English</a>
+        <a href="..\TestNP\marketing.html" class="w3-bar-item w3-button">Nepali</a>
+        <a href="..\TestBD\marketing.html" class="w3-bar-item w3-button">Bangladesh</a>
+        <a href="..\TestRU\marketing.html" class="w3-bar-item w3-button">Russian</a>
+      </div>
+      </div>
+      <div style="float: right;">
+        <a href="#"> <img src="../Work/WL.png" style="width:auto; height: 38px; " >  </a> 
+        
+        </div>
+  </div>
+  
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#work" class="w3-bar-item w3-button">Work</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Career</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+
+  
+
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity" >
+  <div style="padding-bottom: 5px;">
+
+    <!-- Full-width images with number and caption text -->
+    <div style="text-align: center; padding-top: 38px;" class="mySlides fade">
+      
+      <img src="../Work/insolgrey.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+     
+    </div>
+  
+    <div class="mySlides fade" style="text-align: center; padding-top: 38px;">
+     
+      <img src="../Work/Insol.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+      
+    </div>
+  
+   <!-- <div class="mySlides fade">
+      
+      <img src="source/1x.jpg" alt="boat" style="width:100%;">-->
+      
+    </div>
+  
+    <!-- Next and previous buttons 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+  </div>
+  
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+   var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 8000); // Change image every 10 seconds
+}
+  </script>
+  
+
+  <!--<img src="source/1xbet.png" alt="boat" style="width:100%;min-height:350px;max-height:600px;"> -->
+
+    
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+      
+      
+  </div>
+</div>
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-theme-l1" id="work">
+
+<div class="w3-container w3-center" style="padding-top: 20px;">
+<h1 title="our work">OUR WORK</h1>
+</div>
+</br>
+<div class="w3-quarter">
+<div class="w3-card ">
+  <img src="../Work/SMM.jpg" alt="Exchange" style="width:100%">
+  <div class="w3-container">
+  <h2 class="w3-center">SMM </h2>
+  <p style="text-align: justify;">
+   Since Facebook, Instagram, Twitter and YouTube 
+are the most significant platforms to advertise your product, to promote a business in these social networks, we selected the most appropriate tools 
+and use those to develop a strategy. Trust us your content and we will provide the best statistics for your product.
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+  <div class="w3-card ">
+    <img src="../Work/Blogs.jpg" alt="Exchange" style="width:100%">
+    <div class="w3-container w3-white">
+    <h2 class="w3-center ">Blogs</h2>
+    <p style="text-align: justify;">
+      We cooperate with many popular web-sites and vloggers with millions of subscribers. We take responsibility for negotaiting with 
+      vloggers or their agents regarding the placement of your advertisements in their videos. Be assured that the advertisement of your product will be seen by lots of people.
+    </p>  
+
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/SEO.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">SEO</h2>
+      <p style="text-align: justify;">
+      
+        Search engine optimization is what brings you the traffic with a long-term effect. Website promotion is designed to ensure the fulfilment of the only objective: 
+        to bring people interested in your product directly to your website. Trust us to increase the traffic for your website, as well as its full optimization.
+      </p>  
+    
+    
+      
+      </div>
+      </div>
+    </div>
+
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Aff.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">Affiliate Marketing</h2>
+        <p style="text-align: justify;">
+          Kind of promotion carried out with the help of partners who tell the target audience about your product and receive for this a certain reward.
+           We will establish partnerships with any brand. We guarantee a good content, proper SEO and active use of all kinds of social networks.
+
+        </p>  
+        </div>
+        </div>
+      </div>
+
+</div>
+
+<div class="w3-row-padding  w3-theme-l1" id="work">
+
+  </br>
+  <div class="w3-quarter">
+  <div class="w3-card ">
+    <img src="../Work/gads.jpg" alt="Exchange" style="width:100%">
+    <div class="w3-container">
+    <h2 class="w3-center">Google Adsense </h2>
+    <p style="text-align: justify;">
+      We are also connected with such an advertising platform as Google Adsense.
+      The program automatically places text and image ads on websites that match the context. So you can be sure that lots of people will see the advertisement of your product regarding to their search request.
+    </p>  
+    </div>
+    </div>
+  </div>
+
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Facebook.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">Facebook Ads</h2>
+      <p style="text-align: justify;">
+        We set up advertising campaigns from scratch and optimize existing contextual advertising in Facebook Ads.
+Facebook Ads can get your product advertisement in front of the people who are most likely to want your product or services.
+Trust us with your advertisement and we will do everything ourselves.
+      </p>  
+    
+    
+      
+      </div>
+      </div>
+    </div>
+  
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Media.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container w3-white">
+      <h2 class="w3-center ">Media Buying</h2>
+      <p style="text-align: justify;">
+        We will negotiate with the required number of partners to get the most favorable conditions from the advertising websites. 
+        We consider media buying not only as the way of attracting new customers, but the way of involving the existing ones just like increasing their
+         loyalty to your product. 
+
+      </p>  
+    
+    
+      
+      </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Video Marketin.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">Video Marketing</h2>
+        <p style="text-align: justify;">
+         A powerful and effective marketing tool that drives sales and increases the popularity of your product. 
+          It is much easier and faster to watch a video than to read a text of a similar volume. 
+          In modern digital marketing, if you want to build effective interaction with customers, just create an interactive video.
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+  
+      
+  
+  </div>
+
+  <div class="w3-row-padding  w3-theme-l1 " id="work" >
+
+  </br>
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/SMS.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">Email and SMS Marketing</h2>
+      <p style="text-align: justify;">
+        Considered as the best digital marketing tool that can not only attract and retain customers, but also increase loyalty to your product,
+        we carry out any kind of mailings: Our company sends emails and SMS quickly and inexpensively, attracts new customers as well as increases interest to your product and sales.
+      </p>  
+    
+    
+      
+      </div>
+      </div>
+    </div>
+  <div class="w3-quarter">
+  <div class="w3-card ">
+    <img src="../Work/Management.jpg" alt="Exchange" style="width:100%">
+    <div class="w3-container">
+    <h2 class="w3-center">Management</h2>
+    <p style="text-align: justify;">
+      We develop strategies for the promotion of your product, control the work of payment, customer care support, advertisement and other departments. 
+      We carefully monitor the fulfillment of your order. 
+      Be sure that your order will be completed professionally and at a predetermined date.
+    </p>  
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Bonus.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container w3-white">
+      <h2 class="w3-center ">Bonus promotions</h2>
+      <p style="text-align: justify;">
+        Relevant and well-written posts, notes, or articles build brand loyalty and keep people interested in your product. 
+      However, it is necessary to spur the cleints to more active forms of interaction. 
+        Therefore, creative contests and unusual promotions encourage readers to be actively involved in the activity of a group.
+      </p>  
+    
+    
+      
+      </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/payments.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">Payments</h2>
+        <p style="text-align: justify;">
+          Our company integrates various API from different payment gateways or E-wallets. 
+          We are constantly in search of new and emerging payment systems to provide the wide-range of payment services to our customers. Not only do we deal with e-wallets but also we deal with various crypto currencies.
+        </p>  
+        
+        </div>
+        </div>
+      </div>
+  
+  </div>
+
+  
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team" style="background-color: white;">
+    <h1>OUR TEAM</h1>
+    <div style="text-align: center;" >
+    <p style="text-align: center;" >Our team consists only of those who are kindred spirits.
+      We carefully select and train our employees for several months, developing a high degree of responsibility for their work. 
+    </p>
+      <p style="text-align: center;" >
+        Therefore, we are always responsible for our quality of services.
+      Our employees constantly develop their skills alongside with the development of new trends  in IT.
+    </p>
+      <p style="text-align: center;" >
+      Our Coordinators and Managers always oversee the execution of orders, and the Marketing and Sales departments' work is aimed only at the result.</p>
+    </div>
+    <div class="w3-row-padding  w3-theme-l1 " id="work" >
+
+    </br>
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Market.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+        <h2 class="w3-center">Marketing Team</h2>
+        <p style="text-align: justify; text-align: center;">
+          Our marketing team use all their experience while building promotional strategy of your product.
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/CS.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+      <div class="w3-container">
+      <h2 class="w3-center">Customer Care Support Team</h2>
+      <p style="text-align: justify; text-align: center;">
+        The customer care support team will provide the best solution to the problems you might face.
+      </p>  
+      </div>
+      </div>
+    </div>
+    
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Managers.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+        <h2 class="w3-center ">Management Team</h2>
+        <p style="text-align: justify; text-align: center;">
+          The management team ensure that your order will be fulfilled correctly and as early as possible.
+
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/payments.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container">
+          <h2 class="w3-center">Payment Team</h2>
+          <p style="text-align: justify; text-align: center;">
+            Our payment team negotiates with partners, searches and implements new payment systems.
+          </p>  
+          
+          </div>
+          </div>
+        </div>
+    
+    </div>
+   <!-- <div class="w3-row"><br>
+    
+    <div class="w3-quarter">
+      <img src="source/pp.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>The Mraz</h3>
+      <p>Smoke weed every day</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="source/pp.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Badlands Chugs</h3>
+      <p>Where my coke at ?</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="source/pp.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>The Office Rat</h3>
+      <p>Aye Bitch, Call me master you negros.</p>
+    </div>
+    
+    <div class="w3-quarter">
+      <img src="source/pp.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>The Office Whore</h3>
+      <p>100 a night</p>
+    </div>
+    </div>
+    </div>-->
+
+  
+
+
+<!-- Container 
+<div class="w3-container" style="position:relative">
+  
+  
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+  
+</div>-->
+
+<!-- Career Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h1>AVAILABLE JOBS</h1>
+    <br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">CS Representative</p>
+        </li>
+        <li class="w3-padding-16">Customer Support</li>
+        <li class="w3-padding-16">Moscow, Russia</li>
+        <li class="w3-padding-16">Full Time Job</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i>500-2000</h2>
+          <span class="w3-opacity">Negotiable</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large" id="myBtn"><i class="fa fa-check"></i>&nbsp;Job Description</button>
+        </li>
+      </ul>
+      <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p><h1>Customer Service Representative</h1></p>
+
+        <p>
+          <h2 style="text-align: left;">Minimum Qualifications:</h2> 
+          <p> 
+          <ul style="text-align: left;">
+            <li type="square">Bachelor degree in any field, fresh graduates are welcome;</li>
+            <li type="square">Good to excellent verbal and written communication skills;</li>
+            <li type="square">Proficient in MS Office and Internet browsing;</li>
+            <li type="square">Amenable to work in shifts and holidays.</li>
+          </ul>
+        </p>
+          <p><h2 style="text-align: left;">Job Description:</h2></p>
+            <p style="text-align: justify;">Handles inbound calls on the first call, live chat or messaging tool through the use of proactive customer service and call control techniques and proven troubleshooting procedures.
+              Creates an exceptional experience for the customer by using professional customer service techniques, personalizing and focusing on adding value to the call.
+              Retains existing customer/services through the use of proactive customer service/consulting techniques and enabling customers to perceive value in the service.
+              Consistently improves product knowledge and understanding, participates in ongoing training in keeping with changing business strategies.
+              Manipulates systems and escalates issues to the appropriate personnel for final resolution, performs other duties as assigned.
+              
+            </p>
+            <p><h2 style="text-align: left;">Job Conditions:</h2></p>
+            <p> 
+              <ul style="text-align: left;">
+                <li type="square">Modern office near the subway station;</li>
+                <li type="square">Good salary conditions + bonuses on reaching KPI;</li>
+                <li type="square">Work permission;</li>
+                <li type="square">Long term work;</li>
+                <li type="square">Free business lunches, tea, coffee, etc;</li>
+                <li type="square">28 days paid annual vacation;</li>
+                <li type="square">Paid sick leaves;</li>
+                <li type="square">Young and dedicated team.</li>
+              </ul>
+            </p>
+
+            <p><h2 style="text-align: left;">Job Type: Full-time</h2></p>
+        </div>
+      
+      </div>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Project Manager</p>
+        </li>
+        <li class="w3-padding-16">Management</li>
+        <li class="w3-padding-16">Moscow, Russia</li>
+        <li class="w3-padding-16">Full Time Job</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i>1000-5000</h2>
+          <span class="w3-opacity">Negotiable</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large" id="myBtn1"><i class="fa fa-check"></i>&nbsp;Job Description</button>
+        </li>
+      </ul>
+      <div id="myModal1" class="modal1">
+
+        <!-- Modal content -->
+        <div class="modal-content1">
+          <span class="close1">&times;</span>
+          <p><h1>Project Mangaer</h1></p>
+
+        <p>
+          <h2 style="text-align: left;">Minimum Qualifications:</h2> 
+          <p> 
+          <ul style="text-align: left;">
+            <li type="square">Proven management experience;</li>
+            <li type="square">Good to excellent knowledge of English;</li>
+            <li type="square">Analytical mindset and critical thinking;</li>
+            <li type="square">Management and leadership skills;</li>
+            <li type="square">Excellent communication, organizational and interpersonal skillss;</li>
+            <li type="square">Degree in marketing or management would be an advantage.</li>
+          </ul>
+        </p>
+          <p><h2 style="text-align: left;">Job Description:</h2></p>
+            <p style="text-align: justify;">Determine the strategy and objectives of the project, - build trust and awareness of the brand at the local market, 
+              be actively involved in staff hiring process, distribute the duties among the staff, monitor performance of payment gateways, search for new payment methods,
+               maintain work relations with customer support department, regularly gather statistics on clients' requests, report about various problems and negative feedback to the related departments, 
+               implement the overall digital marketing strategy, develop KPIs for the staff, measure performance of team members,
+               make reports on regular basis to the senior management, research the competitors and provide suggestions for further improvement, keep abreast with the industry, market trends and best practices..
+              
+            </p>
+
+            <p><h2 style="text-align: left;">Job Conditions:</h2></p>
+            <p> 
+              <ul style="text-align: left;">
+                <li type="square">Modern office near the subway station;</li>
+                <li type="square">Good salary conditions + bonuses on reaching KPI;</li>
+                <li type="square">Work permission;</li>
+                <li type="square">Long term work;</li>
+                <li type="square">Free business lunches, tea, coffee, etc;</li>
+                <li type="square">28 days paid annual vacation;</li>
+                <li type="square">Paid sick leaves;</li>
+                <li type="square">Young and dedicated team.</li>
+              </ul>
+            </p>
+
+            <p><h2 style="text-align: left;">Job Type: Full-time</h2></p>
+        </div>
+      
+      </div>
+
+      
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Payment Manager</p>
+        </li>
+        <li class="w3-padding-16">Payments</li>
+        <li class="w3-padding-16">Moscow, Russia</li>
+        <li class="w3-padding-16">Full Time Job</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i>900-2500</h2>
+          <span class="w3-opacity">Negotiable</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large" id="myBtn3"><i class="fa fa-check"></i>&nbsp;Job Description</button>
+        </li>
+      </ul>
+      <div id="myModal3" class="modal3">
+
+        <!-- Modal content -->
+        <div class="modal-content3">
+          <span class="close3">&times;</span>
+          <p><h1>Payment Manager</h1></p>
+
+        <p>
+          <h2 style="text-align: left;">Minimum Qualifications:</h2> 
+          <p> 
+          <ul style="text-align: left;">
+            <li type="square">Effective written and verbal communication;</li>
+            <li type="square">Effective and successful complaint handling;</li>
+            <li type="square">Treating customers fairly;</li>
+            <li type="square">Analytical and problem solving;</li>
+            <li type="square">Accuracy and attention to details;</li>
+            <li type="square">Numeracy;</li>
+            <li type="square">Time management and prioritisation;</li>
+            <li type="square">Organisation skills;</li>
+            <li type="square">Staff management;</li>
+            <li type="square">Effective delegation and contracting.</li>
+          </ul>
+        </p>
+          <p><h2 style="text-align: left;">Job Description:</h2></p>
+            <p style="text-align: justify;">We are searching for an organized, motivated payment managers
+               to increase department accuracy and efficiency and provide strong support to our payment department. 
+               The payment manager will ensure that the department operates smoothly, maintain accurate and complete 
+               records regarding payments to partners. He also trains and supports other staff members.
+              Functions of the payment manager: search for payment wallets and systems available in Asia, discussion of the 
+              terms of cooperation with various partners, contracting and delegation, integration of payment systems into the company's website, 
+              functionality support of the payment methods.
+              
+            </p>
+
+            <p><h2 style="text-align: left;">Job Conditions:</h2></p>
+            <p> 
+              <ul style="text-align: left;">
+                <li type="square">Modern office near the subway station;</li>
+                <li type="square">Good salary conditions + bonuses on reaching KPI;</li>
+                <li type="square">Work permission;</li>
+                <li type="square">Long term work;</li>
+                <li type="square">Free business lunches, tea, coffee, etc;</li>
+                <li type="square">28 days paid annual vacation;</li>
+                <li type="square">Paid sick leaves;</li>
+                <li type="square">Young and dedicated team.</li>
+              </ul>
+            </p>
+
+            <p><h2 style="text-align: left;">Job Type: Full-time</h2></p>
+        </div>
+      
+      </div>
+
+      
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Marketing Manager</p>
+        </li>
+        <li class="w3-padding-16">Digital Marketing</li>
+        <li class="w3-padding-16">Moscow, Russia</li>
+        <li class="w3-padding-16">Full Time Job</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide"><i class="fa fa-usd"></i>900-3000</h2>
+          <span class="w3-opacity">Negotiable</span>
+        </li>
+        <li class="w3-theme-l5 w3-padding-24">
+          <button class="w3-button w3-teal w3-padding-large" id="myBtn2"><i class="fa fa-check"></i>&nbsp;Job Description</button>
+        </li>
+      </ul>
+      <div id="myModal2" class="modal2">
+
+        <!-- Modal content -->
+        <div class="modal-content2">
+          <span class="close2">&times;</span>
+          <p><h1>Marketing Mangaer</h1></p>
+
+        <p>
+          <h2 style="text-align: left;">Minimum Qualifications:</h2> 
+          <p> 
+          <ul style="text-align: left;">
+            <li type="square">Proven experience as Digital Marketing Executive or similar role;</li>
+            <li type="square">Good to excellent knowledge of your native language;</li>
+            <li type="square">Excellent understanding of digital marketing concepts and best practices;</li>
+            <li type="square">Experience with B2C social media and media buying channel;</li>
+            <li type="square">Skills and experience in creating good content;</li>
+            <li type="square">Analytical mindset and critical thinking;</li>
+            <li type="square">Excellent communication and interpersonal skills;</li>
+            <li type="square">Degree in marketing or relevant field would be an advantage.</li>
+          </ul>
+        </p>
+          <p><h2 style="text-align: left;">Job Description:</h2></p>
+            <p style="text-align: justify;">Build, plan, implement and manage the overall digital marketing strategy, manage and train the rest of the team.
+               Stay up to date with latest technology and best practices. manage and oversee various digital marketing channels, measure ROI and KPIs, prepare and manage digital marketing budget, 
+               oversee all the company's social media accounts, suggest activities for improving the quality of online content, research and forecast future sales and performance trends, lead, 
+              supervise and motivate the rest of members of digital marketing team, research the competitors and provide suggestions for improvement, keep abreast with industry and market trends and best practices.
+              
+            </p>
+
+            <p><h2 style="text-align: left;">Job Conditions:</h2></p>
+            <p> 
+              <ul style="text-align: left;">
+                <li type="square">Modern office near the subway station;</li>
+                <li type="square">Good salary conditions + bonuses on reaching KPI;</li>
+                <li type="square">Work permission;</li>
+                <li type="square">Long term work;</li>
+                <li type="square">Free business lunches, tea, coffee, etc;</li>
+                <li type="square">28 days paid annual vacation;</li>
+                <li type="square">Paid sick leaves;</li>
+                <li type="square">Young and dedicated team.</li>
+              </ul>
+            </p>
+
+            <p><h2 style="text-align: left;">Job Type: Full-time</h2></p>
+        </div>
+      
+      </div>
+
+      
+    </div>
+    
+
+    
+    <div>
+      <form action="mailto:info@insolutions.work">
+      <input type="submit" value="E-mail your Resume" class="w3-button w3-teal w3-padding-large"></input>
+    </form>
+    </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact" style="text-align: left;">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  MOSCOW, RUSSIA</p>
+     <!--<p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +7.....</p>-->
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  info@insolutions.work</p>
+    </div>
+    
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Support</span>
+      <p style="text-align: justify;">Our customer care support counts lots of professional native 
+        speakers from various countries like Pakistan, India, Sri-Lanka etc. Our company is always in touch with you in any part of the world with a perfect solution to your problems.</p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="/start B286C3EA-F338-11EA-B6AD-9EF122E822B5" title="Telegram"><i class="fa fa-telegram"></i></a>
+
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+
+  
+
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal1 = document.getElementById("myModal1");
+
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn1");
+  
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close1")[0];
+  
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal1.style.display = "block";
+    
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal1.style.display = "none";
+  
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+   
+    
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal2 = document.getElementById("myModal2");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn2");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close2")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal2.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal2.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn3");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close3")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal3.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal3.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal3) {
+      modal3.style.display = "none";
+    }
+  }
+  </script>
+
+<!--<script id="TelegramLiveChatLoader" data-bot="B286C2DC-F338-11EA-B6AD-9EF122E822B5" src="//livechatbot.net/assets/chat/js/loader.js"></script>-->
+</body>
+</html>
