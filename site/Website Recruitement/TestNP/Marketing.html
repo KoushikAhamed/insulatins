@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="ne">
+<title>इन-सल्युसन</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="..\TestEN\main.css">
+<link rel="stylesheet" href="..\TestEN\main1.css">
+<link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="modal1.css">
+<link rel="stylesheet" href="modal2.css">
+<link rel="stylesheet" href="modal3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>होम </a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">काम</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">टिम </a>
+  
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">क्यारियर</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">सम्पर्क</a>
+    <!--<div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Demo<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Demo Link1</a>
+      <a href="#" class="w3-bar-item w3-button">Demo Link2</a>
+      <a href="#" class="w3-bar-item w3-button">Ad more to that side</a>
+    </div>
+    </div>-->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button" title="Notifications">भाषा<i class="fa fa-caret-down"></i></button>     
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="..\TestEN\marketing.html" class="w3-bar-item w3-button">अंग्रेजी</a>
+        <a href="..\TestNP\marketing.html" class="w3-bar-item w3-button">नेपाली</a>
+        <a href="..\TestBD\marketing.html" class="w3-bar-item w3-button">बंगाली</a>
+        <a href="..\TestRU\marketing.html" class="w3-bar-item w3-button">रुसी भाषा </a>
+      </div>
+      </div>
+      <div style="float: right;">
+        <a href="#"> <img src="../Work/WL.png" style="width:auto; height: 38px; " >  </a> 
+        
+        </div>
+  </div>
+  
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">टिम </a>
+    <a href="#work" class="w3-bar-item w3-button">वर्क</a>
+    <a href="#pricing" class="w3-bar-item w3-button">क्यारियर</a>
+    <a href="#contact" class="w3-bar-item w3-button">सम्पर्क</a>
+    <a href="#" class="w3-bar-item w3-button">खोजी गर्नुहोस्</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div style="text-align: center; padding-top: 38px;" class="mySlides fade">
+      
+      <img src="../Work/insolgrey.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+     
+    </div>
+  
+    <div class="mySlides fade" style="text-align: center; padding-top: 40px;">
+     
+      <img src="../Work/Insol.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+      
+    </div>
+  
+   <!-- <div class="mySlides fade">
+      
+      <img src="source/1x.jpg" alt="boat" style="width:100%;">-->
+      
+    </div>
+  
+    <!-- Next and previous buttons 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+   var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 10 seconds
+}
+  </script>
+  
+
+  <!--<img src="source/1xbet.png" alt="boat" style="width:100%;min-height:350px;max-height:600px;"> -->
+
+    
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+      
+      
+  </div>
+</div>
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-theme-l1" id="work">
+
+  <div class="w3-container w3-center" style="padding-top: 20px;">
+  <h1 title="our work">हाम्रो कार्यहरु</h1>
+  </div>
+  </br>
+  <div class="w3-quarter">
+  <div class="w3-card ">
+    <img src="../Work/SMM.jpg" alt="Exchange" style="width:100%">
+    <div class="w3-container">
+    <h2 class="w3-center">एस.एम.एम</h2>
+    <p style="text-align: justify;">
+      किनकी फेसबुक, इन्स्टाग्राम, ट्विटर र यूट्यूब तपाईको उत्पादनको विज्ञापन गर्नको लागि 
+      यी सामाजिक नेटवर्कमा व्यवसायलाई प्रबर्धन गर्न सबै भन्दा महत्वपूर्ण प्लेटफर्महरू हुन्, हामी सबै भन्दा उपयुक्त उपकरणहरू छान्छौं र ती रणनीति विकास गर्न प्रयोग गर्दछौं। 
+      हामीलाई तपाईंको सामग्री विश्वास गर्नुहोस् र हामी तपाईंको उत्पादनको लागि उत्तम तथ्यांकहरु प्रदान गर्नेछौं।
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Blogs.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container w3-white">
+      <h2 class="w3-center ">ब्लग्स</h2>
+      <p style="text-align: justify;">
+        हामी धेरै लोकप्रिय वेब साइटहरू र लाखौं ग्राहकहरूको साथ भ्लगर्ससँग सहयोग गर्दछौं। 
+        हामी भिग्गरहरू वा उनीहरूका एजेन्टहरूसँग उनीहरूको भिडियोमा तपाइँको विज्ञापनको स्थान को बारे मा नागोलाई जिम्मेवारी लिन्छौं। निश्चित हुनुहोस् कि तपाईको उत्पादको विज्ञापन धेरै व्यक्तिले देख्नेछन्। 
+      </p>  
+  
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/SEO.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">एस.इ.ओ</h2>
+        <p style="text-align: justify;">
+        
+          खोज इञ्जिन अप्टिमाइजेसन भनेको के हो जुन तपाईं लाई लामो-अवधि को प्रभाव संग यातायात ल्याउँछ। 
+          वेबसाइट पदोन्नति एक मात्र उद्देश्य को पूर्ति सुनिश्चित गर्न को लागी डिजाइन गरीएको छ: तपाईंको उत्पादन मा रुचि राख्ने मानिसहरूलाई तपाईंको वेबसाइटमा सीधा लानको लागि। 
+          हामीलाई विश्वास गर्नुहोस् तपाईंको ट्राफिकको लागि ट्राफिक, साथै यसको पूर्ण अनुकूलन बढाउन। 
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+  
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Aff.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">अफ्फिलियेट मार्केटिंग</h2>
+          <p style="text-align: justify;">
+            प्रकारको पदोन्नति पार्टनरहरूको सहयोगमा सम्पन्न गरियो जसले तपाईंको उत्पादनको बारेमा लक्षित दर्शकहरूलाई बताउँदछ र यसको लागि निश्चित इनाम प्राप्त गर्दछ। 
+            हामी कुनै पनि ब्रान्डको साथ साझेदारी स्थापना गर्नेछौं। हामी एक राम्रो सामग्री, उचित SEO र सबै प्रकारको सामाजिक नेटवर्क को सक्रिय उपयोग को ग्यारेन्टी दिन्छौं। 
+  
+          </p>  
+          </div>
+          </div>
+        </div>
+  
+  </div>
+  
+  <div class="w3-row-padding  w3-theme-l1" id="work">
+  
+    </br>
+    <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/gads.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">गुगल ऐडसेन्स </h2>
+      <p style="text-align: justify;">
+        हामी गुगल एडसेन्स जस्ता विज्ञापन प्लेटफर्मको साथ पनि जडित छौं। 
+        कार्यक्रमले स्वचालित रूपमा टेक्स्ट र छवि विज्ञापनहरू वेबसाइटहरूमा राख्दछ जुन सन्दर्भसँग मेल खान्छ। 
+        त्यसोभए तपाईं निश्चित हुन सक्नुहुन्छ कि धेरै व्यक्तिले उनीहरूको खोजी अनुरोधको सम्बन्धमा तपाईंको उत्पादनको विज्ञापन देख्नेछन्।
+      </p>  
+      </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Facebook.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">फेसबुक विज्ञापन</h2>
+        <p style="text-align: justify;">
+          हामी स्क्र्याचबाट विज्ञापन अभियान सेट अप गर्छौं र फेसबुक विज्ञापनमा अवस्थित प्रासंगिक विज्ञापन अप्टिमाइज गर्दछौं। 
+          फेसबुक विज्ञापनले तपाईंको उत्पादनको विज्ञापन मानिसका अगाडि पाउन सक्दछ जो तपाईंको उत्पादन वा सेवाहरू चाहान्छन्। हामीलाई तपाईंको विज्ञापनमा विश्वास गर्नुहोस् र हामी आफैं सबै काम गर्दछौं।
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Media.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container w3-white">
+        <h2 class="w3-center ">मिडिया बायिंग</h2>
+        <p style="text-align: justify;">
+          हामी विज्ञापनदाताबाट सबै भन्दा अनुकूल सर्तहरू पाउन साझेदारहरूको आवश्यक संख्यासँग कुराकानी गर्नेछौं।
+          हामी मिडिया खरीदलाई मात्र नयाँ ग्राहकहरु लाई आकर्षित गर्ने को तरीका मा विचार गर्दैनौं, तर अवस्थित व्यक्तिहरु लाई सम्मिलित गर्ने तरिका जस्तै तपाईको उत्पादनप्रति उनीहरूको वफादारी बढाउने।
+  
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Video Marketin.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">भिडियो मार्केटिंग</h2>
+          <p style="text-align: justify;">
+            एक शक्तिशाली र प्रभावी मार्केटिंग उपकरण जसले बिक्री ड्राइव गर्दछ र तपाईंको उत्पादको लोकप्रियता बढाउँदछ। 
+            समान भोल्यूमको पाठ पढ्नु भन्दा भिडियो हेर्न यो धेरै नै सजिलो र छिटो हुन्छ। आधुनिक डिजिटल मार्केटिंगमा, यदि तपाईं ग्राहकहरूसँग प्रभावकारी अन्तर्क्रिया निर्माण गर्न चाहनुहुन्छ भने, केवल एक अन्तर्क्रियात्मक भिडियो सिर्जना गर्नुहोस्।
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+    
+        
+    
+    </div>
+  
+    <div class="w3-row-padding  w3-theme-l1 " id="work" >
+  
+    </br>
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/SMS.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">ईमेल र एसएमएस मार्केटिंग</h2>
+        <p style="text-align: justify;">
+          उत्तम डिजिटल मार्केटिंग उपकरणको रूपमा लिइन्छ जसले केवल ग्राहकहरूलाई आकर्षित गर्न र कायम राख्न सक्दैन, 
+          तर तपाईंको उत्पादनप्रति वफादारी पनि बढाउँदछ, हामी कुनै पनि प्रकारका पत्राचार गर्दछौं: हाम्रो कम्पनीले छिटो र सस्तोमा ईमेल र एसएमएस पठाउँदछ, नयाँ ग्राहकहरूलाई आकर्षित गर्दछ साथै रुचि पनि बढाउँदछ। तपाइँको उत्पादन र बिक्री को लागी।
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Management.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">व्यवस्थापन</h2>
+      <p style="text-align: justify;">
+        हामी तपाईंको उत्पादनको प्रमोशन, भुक्तानीको काम नियन्त्रण,
+        ग्राहक सेवा समर्थन, विज्ञापन र अन्य विभागहरूको रणनीतिहरू विकास गर्दछौं। हामी तपाईको अर्डरको पूर्तिलाई होशियारीका साथ अनुगमन गर्दछौं। निश्चित गर्नुहोस् कि तपाईंको अर्डर पेशेवर र पूर्व निर्धारित मितिमा पूरा हुनेछ।
+      </p>  
+      </div>
+      </div>
+    </div>
+    
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Bonus.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container w3-white">
+        <h2 class="w3-center ">बोनस प्रमोसन</h2>
+        <p style="text-align: justify;">
+          सान्दर्भिक र राम्ररी लिखित पोष्टहरू, नोटहरू, वा लेखहरूले ब्रान्ड वफादारी निर्माण गर्दछ र व्यक्तिलाई तपाईंको उत्पादनमा रुचि राख्छ। 
+          जे होस्, क्लिन्टहरूलाई अन्तर्क्रियाको अधिक सक्रिय प्रकारहरूमा प्रेरणा दिन आवश्यक छ। त्यसकारण, रचनात्मक प्रतिस्पर्धा र असामान्य पदोन्नतिले पाठकहरूलाई समूहको गतिविधिमा सक्रियतासाथ सहभागी हुन प्रोत्साहित गर्दछ।
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/payments.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">पेमेंट्स</h2>
+          <p style="text-align: justify;">
+            हाम्रो कम्पनीले विभिन्न भुक्तानी गेटवे वा ई-वालेटबाट बिभिन्न एपीआई एकीकृत गर्दछ। हामी लगातार नयाँ र उभरती भुक्तान प्रणालीहरूको खोजीमा छौं हाम्रो ग्राहकहरूलाई 
+            भुक्तान सेवाहरूको विस्तृत श्रृंखला प्रदान गर्न। हामी केवल ई-वालेटहरूसँग डील गर्दैनौं तर हामी विभिन्न क्रिप्टो मुद्रासँग पनि व्यवहार गर्छौं।
+          </p>  
+          
+          </div>
+          </div>
+        </div>
+    
+    </div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+    <h1>हाम्रो समूह</h1>
+    <div style="text-align: center;" >
+      <p style="text-align: center;" >हाम्रो टोलीमा केवल आत्माको भावना भएका व्यक्तिहरू समावेश छन्।
+        हामी होशियारीका साथ चयन गर्दछौं र धेरै महिनाको लागि हाम्रा कर्मचारीहरूलाई प्रशिक्षण, उनीहरूको कामको लागि उच्च जिम्मेवारीको विकास गर्दै।
+      </p>
+        <p style="text-align: center;" >
+          त्यसकारण हामी हाम्रा सेवाहरूको गुणस्तरका लागि सँधै जिम्मेवार छौं।
+         हाम्रा कर्मचारीहरूले आईटीमा नयाँ ट्रेंडको विकासको साथसाथै उनीहरूको सीपहरू विकास गर्दछन्।
+      </p>
+        <p style="text-align: center;" >
+          हाम्रो संयोजक र व्यवस्थापकहरू सँधै अर्डरहरूको कार्यान्वयनको निरीक्षण गर्दछन्, र मार्केटिंग र सेल्स डिपार्टमेन्ट्सको काम केवल परिणामको उद्देश्यले गरिन्छ।</p>
+      </div>
+      <div class="w3-row-padding  w3-theme-l1 " id="work" >
+  
+      </br>
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Market.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container">
+          <h2 class="w3-center">मार्केटिइंग टिम</h2>
+          <p style="text-align: justify; text-align: center;">
+            हाम्रो मार्केटिइंग टिम आफ्नो उत्पादको प्रचार रणनीति निर्माण गर्दा उनीहरूको सबै अनुभव प्रयोग गर्दछ।
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+      <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/CS.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+        <h2 class="w3-center">ग्राहक सेवा समर्थन टीम</h2>
+        <p style="text-align: justify; text-align: center;">
+          ग्राहक सेवा समर्थन टीम तपाईले सामना गर्नुपर्ने समस्याहरूको उत्तम समाधान प्रदान गर्दछ।
+        </p>  
+        </div>
+        </div>
+      </div>
+      
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Managers.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+          <h2 class="w3-center ">व्यवस्थापन टोली</h2>
+          <p style="text-align: justify; text-align: center;">
+            व्यवस्थापन टोलीले यो सुनिश्चित गर्दछ कि तपाइँको अर्डर सही र छिटो भन्दा चाँडो पूरा हुनेछ।
+  
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+      
+        <div class="w3-quarter">
+          <div class="w3-card ">
+            <img src="../Work/payments.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container">
+            <h2 class="w3-center">भुक्तानी टीम</h2>
+            <p style="text-align: justify; text-align: center;">
+              हाम्रो भुक्तानी टीम पार्टनरहरूसँग खोज गर्दछ, नयाँ भुक्तान प्रणालीहरू खोजी गर्दछ र लागू गर्दछ।
+            </p>  
+            
+            </div>
+    </div>
+    
+    </div>
+    </div>
+
+<!-- Container 
+<div class="w3-container" style="position:relative">
+  
+  
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+  
+</div>-->
+
+<!-- Career Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+  <h1>उपलब्ध रोजगारहरू</h1>
+  <br>
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">ग्राहक सेवा प्रतिनिधि</p>
+      </li>
+      <li class="w3-padding-16">ग्राहक सेवा</li>
+        <li class="w3-padding-16">मस्को, रूस</li>
+        <li class="w3-padding-16">पूर्ण समय काम</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>५०० - २०००</h2>
+        <span class="w3-opacity">सम्झौता योग्य</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn"><i class="fa fa-check"></i>&nbsp;कामको विवरण</button>
+      </li>
+    </ul>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><h1>ग्राहक सेवा प्रतिनिधि</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">न्यूनतम योग्यता:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">कुनै पनि क्षेत्रमा स्नातक डिग्री, ताजा स्नातकहरुलाई स्वागत छ;</li>
+          <li type="square">उत्कृष्ट मौखिक र लिखित संचार कौशल गर्न योग्य;</li>
+          <li type="square">एम.एस अफिस र ईन्टरनेट ब्राउजिङ्गमा निपुण;</li>
+          <li type="square">पाली र छुट्टीहरूमा काम गर्न योग्य।</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">कामको विवरण:</h2></p>
+          <p style="text-align: justify;">पहिलो कल, प्रत्यक्ष कुराकानी वा मेसेजिङ्ग, उपकरणको सक्रिय ग्राहक सेवा र कल नियन्त्रण तरिकाहरू र प्रमाणित समस्या निवारण, प्रक्रियाहरूको प्रयोग मार्फत इनबाउन्ड कलहरू ह्यान्डल गर्नु पर्नेछ । 
+            पेशेवर ग्राहक सेवा प्रविधिको प्रयोग गरेर, व्यक्तिगतकरण र कलमा मान थप्नमा केन्द्रित गरेर ग्राहकको लागि एक असाधारण अनुभव सिर्जना गर्दछ। 
+            सक्रिय ग्राहक सेवा / परामर्श प्रविधिको प्रयोगबाट र ग्राहकमा सेवाको मूल्य बुझ्न सक्षम पार्दै अवस्थित ग्राहक / सेवाहरू पुन: राख्दछ। लगातार उत्पादन ज्ञान र समझ सुधार गर्दछ, 
+            परिवर्तन रणनीतिक रणनीतिहरु संग तालिका मा चलिरहेको प्रशिक्षण मा भाग लिन्छ। प्रणाली परिमार्जन गर्दछ र अन्तिम समाधान को लागी उपयुक्त कर्मचारीहरु मा मुद्दा बढाउँदछ, तोकिएको रूपमा अन्य कर्तव्यों गर्दछ।
+            
+          </p>
+          <p><h2 style="text-align: left;">कामका सर्तहरू र सुबिधाहरु:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">सबवे स्टेशन नजिक आधुनिक कार्यालय;</li>
+              <li type="square">राम्रो तलब शर्त + KPI पुगेमा बोनस;</li>
+              <li type="square">काम अनुमति;</li>
+              <li type="square">दीर्घकालीन कार्य;</li>
+              <li type="square">नि: शुल्क बिजनेस लन्च, चिया, कफी, आदि;</li>
+              <li type="square">२८ दिनसम्म  वार्षिक भुक्तानी छुट्टी;</li>
+              <li type="square">भुक्तानी बिरामी पातहरू;</li>
+              <li type="square">युवाजनक र समर्पित टीमहरु।</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">कार्य प्रकार: पूर्ण समय</h2></p>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">प्रोजेक्ट म्यानेजर</p>
+      </li>
+      <li class="w3-padding-16">व्यवस्थापन</li>
+        <li class="w3-padding-16">मस्को, रूस</li>
+        <li class="w3-padding-16">पूर्ण समय काम</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>१००० - ५००० </h2>
+        <span class="w3-opacity">सम्झौता योग्य</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn1"><i class="fa fa-check"></i>&nbsp;कामको विवरण</button>
+      </li>
+    </ul>
+    <div id="myModal1" class="modal1">
+
+      <!-- Modal content -->
+      <div class="modal-content1">
+        <span class="close1">&times;</span>
+        <p><h1>प्रोजेक्ट म्यानेजर</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">न्यूनतम योग्यता:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">प्रमाणित प्रबन्ध अनुभव;</li>
+          <li type="square">अंग्रेजीको उत्कृष्ट ज्ञानको लागि राम्रो;</li>
+          <li type="square">विश्लेषणात्मक मानसिकता र आलोचनात्मक सोच;</li>
+          <li type="square">व्यवस्थापन र नेतृत्व कौशल;</li>
+          <li type="square">उत्कृष्ट संचार, संगठनात्मक र पारस्परिक स्किलस;</li>
+          <li type="square">मार्केटिंग वा व्यवस्थापनमा डिग्री एक फाइदा हुनेछ।</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">कामको विवरण:</h2></p>
+          <p style="text-align: justify;">परियोजनाको रणनीति र उद्देश्यहरू निर्धारण गर्नुहोस् - स्थानीय बजारमा ब्रान्डको विश्वास र जागरूकता सिर्जना गर्ने, स्टाफ भाडामा लिने प्रक्रियामा सक्रियतासाथ भाग लिने, स्टाफमा कर्तव्य वितरण गर्ने, 
+            भुक्तानी गेटवेको प्रदर्शन अनुगमन गर्ने, नयाँ भुक्तान विधिहरू खोजी गर्ने, कायम गर्ने ग्राहक समर्थन विभाग संग काम सम्बन्ध, नियमित ग्राहकहरु को अनुरोध मा तथ्यांकहरु जम्मा गर्ने, 
+            विभिन्न समस्याहरु को बारे मा रिपोर्ट र सम्बन्धित विभागहरु मा नकारात्मक प्रतिक्रिया, समग्र डिजिटल मार्केटिंग रणनीति कार्यान्वयन, कर्मचारीहरु को KPI को विकास, 
+            टीम सदस्यहरु को प्रदर्शन मापन, नियमित प्रतिवेदन बनाउन वरिष्ठ व्यवस्थापनको आधारमा, प्रतिस्पर्धीहरूको अनुसन्धान गर्नुहोस् र थप सुधारको लागि सुझावहरू प्रदान गर्नुहोस्, उद्योग, बजार प्रवृत्ति र उत्तम अभ्यासहरूसँग टाढा राख्नुहोस्।
+           </p>
+
+          <p><h2 style="text-align: left;">कामका सर्तहरू र सुबिधाहरु:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">सबवे स्टेशन नजिक आधुनिक कार्यालय;</li>
+              <li type="square">राम्रो तलब शर्त + KPI पुगेमा बोनस;</li>
+              <li type="square">काम अनुमति;</li>
+              <li type="square">दीर्घकालीन कार्य;</li>
+              <li type="square">नि: शुल्क बिजनेस लन्च, चिया, कफी, आदि;</li>
+              <li type="square">२८ दिनसम्म  वार्षिक भुक्तानी छुट्टी;</li>
+              <li type="square">भुक्तानी बिरामी पातहरू;</li>
+              <li type="square">युवाजनक र समर्पित टीमहरु।</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">कार्य प्रकार: पूर्ण समय</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">पेमेन्ट म्यानेजर</p>
+      </li>
+      <li class="w3-padding-16">भुक्तानी</li>
+        <li class="w3-padding-16">मस्को, रूस</li>
+        <li class="w3-padding-16">पूर्ण समय काम</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>९०० - २५००</h2>
+        <span class="w3-opacity">सम्झौता योग्य</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn3"><i class="fa fa-check"></i>&nbsp;कामको विवरण</button>
+      </li>
+    </ul>
+    <div id="myModal3" class="modal3">
+
+      <!-- Modal content -->
+      <div class="modal-content3">
+        <span class="close3">&times;</span>
+        <p><h1>पेमेन्ट म्यानेजर</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">न्यूनतम योग्यता:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+            <li type="square">प्रभावी लिखित र मौखिक संचार;</li>
+            <li type="square">प्रभावकारी र सफल उजूरी ह्यान्डलिंग;</li>
+            <li type="square">ग्राहकहरु संग निष्पक्ष व्यवहार;</li>
+            <li type="square">विश्लेषणात्मक र समस्या समाधान;</li>
+            <li type="square">शुद्धता र विवरणमा ध्यान;</li>
+            <li type="square">संख्या;</li>
+            <li type="square">समय व्यवस्थापन र प्राथमिकता;</li>
+            <li type="square">संगठन कौशल;</li>
+            <li type="square">कर्मचारी व्यवस्थापन;</li>
+            <li type="square">प्रभावकारी प्रतिनिधिमण्डल र करार।</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">कामको विवरण:</h2></p>
+          <p style="text-align: justify;">हामी विभागको शुद्धता र दक्षता बढाउन र हाम्रो भुक्तान विभागलाई कडा समर्थन प्रदान गर्न संगठित, प्रेरित भुक्तान प्रबन्धकहरू खोज्दैछौं। 
+            भुक्तानी प्रबन्धकले सुनिश्चित गर्नेछ कि विभाग सजिलैसँग सञ्चालन गर्दछ, साझेदारहरूलाई भुक्तानीको सम्बन्धमा सही र पूर्ण रेकर्डहरू कायम गर्दछ, र जसले अन्य कर्मचारी कर्मचारीहरूलाई भाँडामा लिन्छ, प्रशिक्षण दिन्छ, र समर्थन गर्दछ।
+             भुक्तानी प्रबन्धकको कार्य: एशियामा उपलब्ध भुक्तानी वालेट र प्रणालीहरूको लागि खोजी, विभिन्न साझेदारहरूसँग सम्झौताको शर्तको छलफल, अनुबंध र प्रतिनिधिमण्डल, कम्पनीको वेबसाइटमा भुक्तान प्रणालीहरूको एकीकरण, भुक्तान विधिहरूको कार्यक्षमता समर्थन।
+            
+          </p>
+
+          <p><h2 style="text-align: left;">कामका सर्तहरू र सुबिधाहरु:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">सबवे स्टेशन नजिक आधुनिक कार्यालय;</li>
+              <li type="square">राम्रो तलब शर्त + KPI पुगेमा बोनस;</li>
+              <li type="square">काम अनुमति;</li>
+              <li type="square">दीर्घकालीन कार्य;</li>
+              <li type="square">नि: शुल्क बिजनेस लन्च, चिया, कफी, आदि;</li>
+              <li type="square">२८ दिनसम्म  वार्षिक भुक्तानी छुट्टी;</li>
+              <li type="square">भुक्तानी बिरामी पातहरू;</li>
+              <li type="square">युवाजनक र समर्पित टीमहरु।</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">कार्य प्रकार: पूर्ण समय</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">मार्केटिंग म्यानेजर</p>
+      </li>
+      <li class="w3-padding-16">डिजिटल मार्केटिंग</li>
+        <li class="w3-padding-16">मस्को, रूस</li>
+        <li class="w3-padding-16">पूर्ण समय काम</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>९०० - ३०००</h2>
+        <span class="w3-opacity">सम्झौता योग्य</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn2"><i class="fa fa-check"></i>&nbsp;कामको विवरण</button>
+      </li>
+    </ul>
+    <div id="myModal2" class="modal2">
+
+      <!-- Modal content -->
+      <div class="modal-content2">
+        <span class="close2">&times;</span>
+        <p><h1>मार्केटिंग म्यानेजर</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">न्यूनतम योग्यता:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">डिजिटल मार्केटिंग कार्यकारी वा यस्तै भूमिकाको रूपमा प्रमाणित अनुभव;</li>
+          <li type="square">तपाईंको मातृभाषाको उत्कृष्ट ज्ञानको लागि राम्रो;</li>
+          <li type="square">डिजिटल मार्केटिंग अवधारणा र उत्तम अभ्यासहरूको उत्कृष्ट समझ;</li>
+          <li type="square">B2C सामाजिक मीडिया र मिडिया खरीद च्यानलको साथ अनुभव;</li>
+          <li type="square">कौशल र राम्रो सामग्री सिर्जना गर्न को लागी अनुभव;</li>
+          <li type="square">विश्लेषणात्मक मानसिकता र आलोचनात्मक सोच;</li>
+          <li type="square">उत्कृष्ट संचार र पारस्परिक कौशल;</li>
+          <li type="square">मार्केटिंग वा प्रासंगिक क्षेत्रमा डिग्री एक फाइदा हुनेछ।</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">कामको विवरण:</h2></p>
+          <p style="text-align: justify;">समग्र डिजिटल मार्केटिंग रणनीति बनाउनुहोस्, योजना बनाउनुहोस्, लागू गर्नुहोस् र प्रबन्ध गर्नुहोस्, बाँकी टोलीलाई ब्यवस्थापन र तालिम। नवीनतम प्
+            रविधि र उत्तम अभ्यासहरूको साथ अद्यावधिक रहनुहोस्। विभिन्न डिजिटल मार्केटिंग च्यानलहरू प्रबन्ध गर्नुहोस् र निरीक्षण गर्नुहोस्, आरओआई र केपीआईहरू नाप्नुहोस्, डिजिटल मार्केटिंग बजेट तयार गर्नुहोस् र प्रबन्ध गर्नुहोस्, 
+            सबै कम्पनीको सामाजिक मिडिया खाताहरूको निरीक्षण गर्नुहोस्, अनलाइन सामग्रीको गुणस्तर सुधार गर्न गतिविधिहरूको सुझाव दिनुहोस्, 
+            अनुसन्धान र भविष्यवाणी बिक्री र प्रदर्शन प्रवृत्ति, नेतृत्व, पर्यवेक्षण र डिजिटल मार्केटिंग टीमका बाँकी सदस्यहरूलाई उत्प्रेरित गर्नुहोस्, प्रतिस्पर्धीहरूको अनुसन्धान गर्नुहोस् र सुधारको लागि 
+            सुझावहरू प्रदान गर्नुहोस्, उद्योग र बजार प्रवृत्तिहरू र उत्तम अभ्यासहरूको साथ अमूर्त रहनुहोस्।
+            
+          </p>
+
+          <p><h2 style="text-align: left;">कामका सर्तहरू र सुबिधाहरु:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">सबवे स्टेशन नजिक आधुनिक कार्यालय;</li>
+              <li type="square">राम्रो तलब शर्त + KPI पुगेमा बोनस;</li>
+              <li type="square">काम अनुमति;</li>
+              <li type="square">दीर्घकालीन कार्य;</li>
+              <li type="square">नि: शुल्क बिजनेस लन्च, चिया, कफी, आदि;</li>
+              <li type="square">२८ दिनसम्म  वार्षिक भुक्तानी छुट्टी;</li>
+              <li type="square">भुक्तानी बिरामी पातहरू;</li>
+              <li type="square">युवाजनक र समर्पित टीमहरु।</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">कार्य प्रकार: पूर्ण समय</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+  
+
+  
+  <div>
+    <form action="mailto:info@insolutions.work">
+    <input type="submit" value="तपाईंको सीभी ईमेल गर्नुहोस्" class="w3-button w3-teal w3-padding-large"></input>
+  </form>
+  </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact" style="text-align: left;>
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">हामीलाई सम्पर्क गर्नुहोस</span></div>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> मस्को, रूस</p>
+      <!--<p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +7.....</p>-->
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  info@insolutions.work</p>
+    </div>
+    <!--<div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>नाम</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>ईमेल</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>सन्देश</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>मलाई यो मनपर्यो</label>
+      <button type="submit" class="w3-button w3-right w3-theme">सेन्ड</button>
+      </form>
+    </div>-->
+    <div class="w3-col m5">
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">समर्थन</span>
+        <p style="text-align: justify;">हाम्रो ग्राहक सेवा समर्थन पाकिस्तान, भारत, श्रीलंका इत्यादि जस्ता विभिन्न देशका धेरै पेशेवर नेटिभ स्पिकरहरूको गणना गर्दछ। हाम्रो कम्पनी सधैं तपाईंको 
+          समस्याहरूको एक पूर्ण समाधानको साथ विश्वको कुनै पनि भागमा तपाईंसँग सम्पर्कमा रहन्छ।
+        </p>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>हामीलाई फलो गर्नुहोस</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Telegram"><i class="fa fa-telegram"></i></a>
+
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal1 = document.getElementById("myModal1");
+
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn1");
+  
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close1")[0];
+  
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal1.style.display = "block";
+    
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal1.style.display = "none";
+  
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+   
+    
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal2 = document.getElementById("myModal2");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn2");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close2")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal2.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal2.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn3");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close3")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal3.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal3.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal3) {
+      modal3.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
+</html>

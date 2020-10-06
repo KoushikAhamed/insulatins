@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="ru">
+<title>Набор персонала</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="..\TestEN\main.css">
+<link rel="stylesheet" href="..\TestEN\main1.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="modal1.css">
+<link rel="stylesheet" href="modal2.css">
+<link rel="stylesheet" href="modal3.css">
+<body id="myPage">
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Домой</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Работа</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Команда</a>
+  
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Карьера</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Контакты</a>
+    <!--<div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Demo<i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Demo Link1</a>
+      <a href="#" class="w3-bar-item w3-button">Demo Link2</a>
+      <a href="#" class="w3-bar-item w3-button">Ad more to that side</a>
+    </div>
+    </div>-->
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-button" title="Notifications">Язык<i class="fa fa-caret-down"></i></button>   
+      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+        <a href="..\TestEN\marketing.html" class="w3-bar-item w3-button">Английский</a>
+        <a href="..\TestNP\marketing.html" class="w3-bar-item w3-button">Непальский</a>
+        <a href="..\TestBD\marketing.html" class="w3-bar-item w3-button">Бенгальский</a>
+        <a href="..\TestBD\marketing.html" class="w3-bar-item w3-button">Русский</a>
+      
+      </div>
+      </div>
+      <div style="float: right;">
+        <a href="#"> <img src="../Work/WL.png" style="width:auto; height: 38px; " >  </a> 
+        
+        </div>
+  </div>
+  
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Команда</a>
+    <a href="#work" class="w3-bar-item w3-button">Работа</a>
+    <a href="#pricing" class="w3-bar-item w3-button">Карьера</a>
+    <a href="#contact" class="w3-bar-item w3-button">Контакты</a>
+    <a href="#" class="w3-bar-item w3-button">Поиск</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div style="text-align: center; padding-top: 38px;" class="mySlides fade">
+      
+      <img src="../Work/insolgrey.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+     
+    </div>
+  
+    <div class="mySlides fade" style="text-align: center; padding-top: 38px;">
+     
+      <img src="../Work/Insol.jpg" alt="boat" style="width:100%;" class="w3-hover-opacity">
+      
+    </div>
+  
+   <!-- <div class="mySlides fade">
+      
+      <img src="source/1x.jpg" alt="boat" style="width:100%;">-->
+      
+    </div>
+  
+    <!-- Next and previous buttons 
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+   var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 5000); // Change image every 10 seconds
+}
+  </script>
+  
+
+  <!--<img src="source/1xbet.png" alt="boat" style="width:100%;min-height:350px;max-height:600px;"> -->
+
+    
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+      
+      
+  </div>
+</div>
+
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-theme-l1" id="work">
+
+  <div class="w3-container w3-center" style="padding-top: 20px;">
+  <h1 title="our work">Наша работа</h1>
+  </div>
+  </br>
+  <div class="w3-quarter">
+  <div class="w3-card ">
+    <img src="../Work/SMM.jpg" alt="Exchange" style="width:100%">
+    <div class="w3-container">
+    <h2 class="w3-center">SMM </h2>
+    <p style="text-align: justify;">
+      Поскольку Facebook, Instagram, Twitter и YouTube являются самыми значимыми площадками для рекламы Вашего продукта и продвижения 
+      бизнеса в этих социальных сетях, мы выбираем наиболее подходящие инструменты, а затем с их помощью разрабатываем стратегии. Доверьте нам свой контент, и мы предоставим лучшую статистику для вашего продукта.
+    </div>
+    </div>
+  </div>
+  
+  <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Blogs.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container w3-white">
+      <h2 class="w3-center ">Блоги</h2>
+      <p style="text-align: justify;">
+        Мы сотрудничаем со многими популярными веб-сайтами и влогерами с миллионами подписчиков. 
+        Мы берем на себя ответственность за переговоры с влогерами или их агентами относительно размещения Вашей рекламы в их видео. Будьте уверены, что рекламу Вашего продукта увидят многие.
+
+      </p>  
+  
+        </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/SEO.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">SEO</h2>
+        <p style="text-align: justify;">
+        
+          Поисковая оптимизация - это то, что приносит Вам трафик, причем с долгосрочным эффектом. Раскрутка сайта призвана обеспечить реализацию 
+          единственной цели: привести людей, заинтересованных в Вашем продукте, прямо на Ваш сайт. Доверьте нам увеличение посещаемости вашего сайта, а также его полную оптимизацию.
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+  
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Aff.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">Партнерский маркетинг</h2>
+          <p style="text-align: justify;">
+            Вид раскрутки, осуществляемый с помощью партнеров, которые рассказывают целевой аудитории о Вашем продукте и получают за это определенное вознаграждение. 
+            Мы наладим партнерские отношения с любым брендом. Мы гарантируем хороший контент, правильное SEO и активное использование всевозможных социальных сетей.
+  
+          </p>  
+          </div>
+          </div>
+        </div>
+  
+  </div>
+  
+  <div class="w3-row-padding  w3-theme-l1" id="work">
+  
+    </br>
+    <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/gads.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">Google Adsense </h2>
+      <p style="text-align: justify;">
+        Мы также связаны с такой рекламной площадкой, как Google Adsense. Программа автоматически размещает текстовую и графическую рекламу на веб-сайтах, 
+        соответствующих контексту. Так что Вы можете быть уверены, что многие люди увидят рекламу Вашего продукта в зависимости от их поискового запроса.
+      </p>  
+      </div>
+      </div>
+    </div>
+  
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Facebook.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">Facebook Ads</h2>
+        <p style="text-align: justify;">
+          Мы настраиваем рекламные кампании с нуля и оптимизируем уже имеющуюся контекстную рекламу в Facebook Ads. 
+          Эта платформа сможет предоставить рекламу вашего продукта людям, которые, скорее всего, заинтересованы в Вашем продукте или услугах. Доверьте нам свою рекламу, и мы все сделаем сами.
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Media.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container w3-white">
+        <h2 class="w3-center ">Медиа-закупки</h2>
+        <p style="text-align: justify;">
+          Мы берем на себя переговоры с необходимым количеством подрядчиков о получении максимально выгодных условий от рекламных площадок. 
+          Мы рассматриваем медиа-закупку не только как способ привлечения новых клиентов, но и как способ охвата существующих, а также повышения их лояльности к Вашему продукту.
+  
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Video Marketin.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">Видео-маркетинг</h2>
+          <p style="text-align: justify;">
+            Мощный и эффективный маркетинговый инструмент, который стимулирует продажи и увеличивает популярность Вашего продукта. Посмотреть видео намного проще и быстрее, нежели читать текст аналогичного объема. 
+            В современном цифровом маркетинге, если вы хотите наладить эффективное взаимодействие с клиентами, просто создайте интерактивное видео.
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+    
+        
+    
+    </div>
+  
+    <div class="w3-row-padding  w3-theme-l1 " id="work" >
+  
+    </br>
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/SMS.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container">
+        <h2 class="w3-center">Email и SMS маркетинг</h2>
+        <p style="text-align: justify;">
+          Считается лучшим инструментом цифрового маркетинга, который может не только завлекать и удерживать клиентов, 
+          но и повышать лояльность к Вашему продукту. Мы проводим любые виды рассылок: наша компания быстро и недорого рассылает электронные письма и SMS,
+           привлекает новых покупателей, а также повышает интерес к Вашему продукту и продажам.
+
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    <div class="w3-quarter">
+    <div class="w3-card ">
+      <img src="../Work/Management.jpg" alt="Exchange" style="width:100%">
+      <div class="w3-container">
+      <h2 class="w3-center">Менеджмент</h2>
+      <p style="text-align: justify;">
+        Мы разрабатываем стратегии продвижения Вашего продукта, контролируем работу платежных, сервисных, рекламных и других отделов. 
+        Также мы внимательно следим за выполнением Вашего заказа. Будьте уверены, что Ваш заказ будет выполнен безоговорчно, профессионально и в заранее оговоренные сроки.
+
+      </p>  
+      </div>
+      </div>
+    </div>
+    
+    <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/Bonus.jpg" alt="Exchange" style="width:100%">
+        <div class="w3-container w3-white">
+        <h2 class="w3-center ">Бонусные акции</h2>
+        <p style="text-align: justify;">
+          Актуальные и превосходно написанные посты, заметки или статьи повышают лояльность к бренду и поддерживают интерес людей к Вашему продукту. 
+          Однако необходимо "подстегнуть" клиентов к более активным формам взаимодействия. Таким образом, креативные конкурсы и необычные акции побуждают читателей активно участвовать в деятельности группы.
+        </p>  
+      
+      
+        
+        </div>
+        </div>
+      </div>
+    
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/payments.jpg" alt="Exchange" style="width:100%">
+          <div class="w3-container">
+          <h2 class="w3-center">Платежи</h2>
+          <p style="text-align: justify;">
+            Наша компания интегрирует API из разных платежных шлюзов или электронных кошельков. Мы постоянно находимся в поиске новых и появляющихся платежных систем, 
+            чтобы предоставлять нашим клиентам широкий спектр платежных услуг. 
+            Мы занимаемся не только электронными кошельками, но и различными криптовалютами.
+          </p>  
+          
+          </div>
+          </div>
+        </div>
+    
+    </div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+    <h1>НАША КОМАНДА</h1>
+    <div style="text-align: center;" >
+      <p style="text-align: center;" >В нашей команде лишь те, кто близки по духу..
+        Мы тщательно проводим отбор и обучаем в течении нескольких месяцев наших сотрудников, развивая высокую степень ответственности за их работу. 
+      </p>
+        <p style="text-align: center;" >
+          Поэтому мы всегда в ответе за наше качество услуг.
+          Навыки наших сотрудников не стоят на месте, а развиваются с течением новых веяний информационных технологий.
+      </p>
+        <p style="text-align: center;" >
+          Наши Coordinators Managers всегда контролируют исполнение заказов, а отделы по Marketing и Sales работают только на результат.</p>
+      </div>
+    
+      <div class="w3-row-padding  w3-theme-l1 " id="work" >
+
+      </br>
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Market.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container">
+          <h2 class="w3-center">Команда маркетологов</h2>
+          <p style="text-align: justify; text-align: center;">
+            Наша команда маркетологов использует весь свой опыт и знания при построении стратегии продвижения Вашего продукта.
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+      <div class="w3-quarter">
+      <div class="w3-card ">
+        <img src="../Work/CS.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-container">
+        <h2 class="w3-center">Команда СП </h2>
+        <p style="text-align: justify; text-align: center;">
+          Команда службы поддержки клиентов предложит лучшее решение проблем, с которыми Вы можете столкнуться.
+        </p>  
+        </div>
+        </div>
+      </div>
+      
+      <div class="w3-quarter">
+        <div class="w3-card ">
+          <img src="../Work/Managers.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+          <h2 class="w3-center ">Управленческая команда</h2>
+          <p style="text-align: justify; text-align: center;">
+            Управленческая команда позаботится о том, чтобы Ваш заказ был выполнен правильно и в кратчайшие сроки.
+  
+          </p>  
+        
+        
+          
+          </div>
+          </div>
+        </div>
+      
+        <div class="w3-quarter">
+          <div class="w3-card ">
+            <img src="../Work/payments.png" alt="Exchange" style="width:100%" class="w3-hover-opacity">
+            <div class="w3-container">
+            <h2 class="w3-center">Платежная команда</h2>
+            <p style="text-align: justify; text-align: center;">
+              Наша платежная команда ведет переговоры с партнерами, ищет и внедряет новые платежные системы и электронные кошельки.
+            </p>  
+            
+            </div>
+            </div>
+    
+     
+      
+      
+    
+    </div>
+    </div>
+
+<!-- Container 
+<div class="w3-container" style="position:relative">
+  
+  
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal"
+  style="position:absolute;top:-28px;right:24px">+</a>
+  
+</div>-->
+
+<!-- Career Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+  <h1>Доступные вакансии</h1>
+  <br>
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Оператор СП</p>
+      </li>
+      <li class="w3-padding-16">Служба поддержки</li>
+        <li class="w3-padding-16">Москва, Россия </li>
+        <li class="w3-padding-16">Полный рабочий день</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>500-2000</h2>
+        <span class="w3-opacity">Зарплата договорная</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn"><i class="fa fa-check"></i>&nbsp;Полное описание</button>
+      </li>
+    </ul>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p><h1>Представитель службы поддержки клиентов</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">Минимальные требования к кандидату на должность:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">Степень бакалавра в любой сфере, выпускники ВУЗов приветствуются;</li>
+          <li type="square">Отличные и письменные коммуникативные навыки;</li>
+          <li type="square">Свободное владение MS Office и Internet Explorer;</li>
+          <li type="square">Возможность работать в будние и праздничные дни.</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">Описание работы:</h2></p>
+          <p style="text-align: justify;">Обработка входящих звонков по первому вызову, общение с клиентами посредством мессенджеров, программного
+             обеспечения по обработке вызовов, а также предоставление информации клиенту. Создание исключительного опыта для клиента и добавление ценности 
+             звонка за счет использования профессиональных методов обслуживания, путем поиска индивидуального подхода к клиенту. Удержание существующих клиентов
+              за счет использования профессиональных методов обслуживания/консультирования, что позволяет клиентам больше воспринимать ценность звонка. 
+              Совершенствование знаний продуктов компании, участие в постоянных тренингах в 
+            соответствии с меняющимися бизнес-стратегиями. Управление системами и передача разрешения проблем соответствующему персоналу для принятия 
+            окончательного решения, а также выполнение других порученных обязанностей. 
+            
+          </p>
+          <p><h2 style="text-align: left;">Условия:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">Современный офис возле метро;</li>
+              <li type="square">Хорошие условия оплаты труда + бонусы при достижении KPI;</li>
+              <li type="square">Разрешение на работу;</li>
+              <li type="square">Долгосрочная работа;</li>
+              <li type="square">Бесплатные бизнес-ланчи, чай, кофе и др.;</li>
+              <li type="square">Ежегодный оплачиваемый отпуск продолжительностью 28 календарных дней;</li>
+              <li type="square">Оплачиваемые больничные;</li>
+              <li type="square">Молодой и целеустремленный коллектив.</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">График работы: полный рабочий день</h2></p>
+      </div>
+    
+    </div>
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Менеджер проекта</p>
+      </li>
+      <li class="w3-padding-16">Менеджмент</li>
+        <li class="w3-padding-16">Москва, Россия</li>
+        <li class="w3-padding-16">Полный рабочий день</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>1000-5000</h2>
+        <span class="w3-opacity">Зарплата договорная</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn1"><i class="fa fa-check"></i>&nbsp;Полное описание</button>
+      </li>
+    </ul>
+    <div id="myModal1" class="modal1">
+
+      <!-- Modal content -->
+      <div class="modal-content1">
+        <span class="close1">&times;</span>
+        <p><h1>Менеджер проекта</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">Минимальные требования к кандидату на должность:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">Опыт в отрасли менеджмента;</li>
+          <li type="square">Превосходное знание английского языка;</li>
+          <li type="square">Аналитический склад ума и критическое мышление;</li>
+          <li type="square">Управленческие и лидерские качества;</li>
+          <li type="square">Отличные коммуникативные, организационные и межличностные навыки;</li>
+          <li type="square">Ученая степень в области маркетинга или менеджмента будет преимуществом.</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">Описание работы:</h2></p>
+          <p style="text-align: justify;">Определять стратегию и цели проекта, укреплять доверие и осведомленность о бренде на местном рынке, активно участвовать 
+            в процессе набора персонала, распределять обязанности между сотрудниками, контролировать работу платежных шлюзов, искать новые способы оплаты, поддерживать 
+            рабочие отношения с отделом поддержки клиентов, регулярно собирать статистику по запросам клиентов, сообщать о различных проблемах и отрицательных отзывах в 
+            соответствующие отделы, реализовывать общую стратегию цифрового маркетинга, разрабатывать KPI для сотрудников, оценивать эффективность членов команды, составлять отчеты 
+            на регулярной основе для высшего руководства, исследовать деятельность конкурентов и предоставлять предложения по дальнейшему совершенствованию, следить за отраслями, 
+            тенденциями рынка и передовыми практиками.
+            
+          </p>
+
+          <p><h2 style="text-align: left;">Условия:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">Современный офис возле метро;</li>
+              <li type="square">Хорошие условия оплаты труда + бонусы при достижении KPI;</li>
+              <li type="square">Разрешение на работу;</li>
+              <li type="square">Долгосрочная работа;</li>
+              <li type="square">Бесплатные бизнес-ланчи, чай, кофе и др.;</li>
+              <li type="square">Ежегодный оплачиваемый отпуск продолжительностью 28 календарных дней;</li>
+              <li type="square">Оплачиваемые больничные;</li>
+              <li type="square">Молодой и целеустремленный коллектив.</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">График работы: полный рабочий день</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Платежный менеджер </p>
+      </li>
+      <li class="w3-padding-16">Платежи</li>
+        <li class="w3-padding-16">Москва, Россия</li>
+        <li class="w3-padding-16">Полный рабочий день</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>900-2500</h2>
+        <span class="w3-opacity">Зарплата договорная</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn3"><i class="fa fa-check"></i>&nbsp;Полное описание</button>
+      </li>
+    </ul>
+    <div id="myModal3" class="modal3">
+
+      <!-- Modal content -->
+      <div class="modal-content3">
+        <span class="close3">&times;</span>
+        <p><h1>Платежный менеджер</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">Минимальные требования к кандидату на должность:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">Эффективное письменное и устное общение;</li>
+          <li type="square">Эффективное и успешное рассмотрение жалоб;</li>
+          <li type="square">Справедливое отношение к клиентам;</li>
+          <li type="square">Аналитические навыки и уение быстро решать проблемы;</li>
+          <li type="square">Точность и внимание к деталям;</li>
+          <li type="square">Умение считать;</li>
+          <li type="square">Умение распределять время и расставлять приоритеты;</li>
+          <li type="square">Организационные навыки;</li>
+          <li type="square">Управление персоналом;</li>
+          <li type="square">Эффективное делегирование полномочий и заключение договоров.</li>
+          
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">Описание работы:</h2></p>
+          <p style="text-align: justify;">Мы ищем организованных, мотивированных платежных менеджеров, для оказания сильной поддержки, повышения точности
+             и эффективности работы нашего платежного отдела. Менеджер по платежам обеспечивает бесперебойную работу отдела, ведет точные и полные записи о платежах партнерам, 
+             а также обучает и поддерживает других сотрудников. Функции платежного менеджера: поиск платежных кошельков и систем, доступных 
+            в Азии, обсуждение условий сотрудничества с различными партнерами, заключение договоров и делегирование полномочий, интеграция платежных систем на сайт 
+            компании, поддержка функционирования платежных систем.
+            
+          </p>
+
+          <p><h2 style="text-align: left;">Условия:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">Современный офис возле метро;</li>
+              <li type="square">Хорошие условия оплаты труда + бонусы при достижении KPI;</li>
+              <li type="square">Разрешение на работу;</li>
+              <li type="square">Долгосрочная работа;</li>
+              <li type="square">Бесплатные бизнес-ланчи, чай, кофе и др.;</li>
+              <li type="square">Ежегодный оплачиваемый отпуск продолжительностью 28 календарных дней;</li>
+              <li type="square">Оплачиваемые больничные;</li>
+              <li type="square">Молодой и целеустремленный коллектив.</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">График работы: полный рабочий день</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+
+  <div class="w3-third w3-margin-bottom">
+    <ul class="w3-ul w3-border w3-hover-shadow">
+      <li class="w3-theme">
+        <p class="w3-xlarge">Менеджер по маркетингу</p>
+      </li>
+      <li class="w3-padding-16">Цифровой маркетинг</li>
+        <li class="w3-padding-16">Москва, Россия</li>
+        <li class="w3-padding-16">Полный рабочий день</li>
+      <li class="w3-padding-16">
+        <h2 class="w3-wide"><i class="fa fa-usd"></i>900-3000</h2>
+        <span class="w3-opacity">Зарплата договорная</span>
+      </li>
+      <li class="w3-theme-l5 w3-padding-24">
+        <button class="w3-button w3-teal w3-padding-large" id="myBtn2"><i class="fa fa-check"></i>&nbsp;Полное описание</button>
+      </li>
+    </ul>
+    <div id="myModal2" class="modal2">
+
+      <!-- Modal content -->
+      <div class="modal-content2">
+        <span class="close2">&times;</span>
+        <p><h1>Менеджер по маркетингу</h1></p>
+
+      <p>
+        <h2 style="text-align: left;">Минимальные требования к кандидату на должность:</h2> 
+        <p> 
+        <ul style="text-align: left;">
+          <li type="square">Опыт работы в качестве руководителя по цифровому маркетингу или аналогичной должности;</li>
+          <li type="square">Хорошее или отличное знание любого азиатского языка;</li>
+          <li type="square">Отличное понимание концепций и лучших практик цифрового маркетинга;</li>
+          <li type="square">Опыт работы с социальными сетями B2C и каналами медиа-закупок;</li>
+          <li type="square">Навыки и опыт в создании качественного контента;</li>
+          <li type="square">Аналитический склад ума и критическое мышление;</li>
+          <li type="square">Отличные коммуникативные и межличностные навыки;</li>
+          <li type="square">Степень бакалавра в области маркетинга или другой соответствующей области будет преимуществом.</li>
+        </ul>
+      </p>
+        <p><h2 style="text-align: left;">Описание работы:</h2></p>
+          <p style="text-align: justify;">Создание, планирование, внедрение и управление общей стратегией цифрового маркетинга; тренинг команды;
+             наблюдение за последними технологиями, отраслевыми и рыночными тенденциями передовых практик и опыта, управление различными каналами 
+             цифрового маркетинга; оценка ROI и KPI; подготовка и управление бюджетом цифрового маркетинга; управление всеми аккаунтами компании в социальных сетях; 
+             предложение улучшений по повышению качества онлайн-контента; исследование и прогноз будущих тенденций продаж и производительности;
+             руководство, контроль и мотивация остальных членов команды цифрового маркетинга; изучение деятельности конкурентов и внесение предложений по возможным улучшений контента команды.
+            
+          </p>
+
+          <p><h2 style="text-align: left;">Условия:</h2></p>
+          <p> 
+            <ul style="text-align: left;">
+              <li type="square">Современный офис возле метро;</li>
+              <li type="square">Хорошие условия оплаты труда + бонусы при достижении KPI;</li>
+              <li type="square">Разрешение на работу;</li>
+              <li type="square">Долгосрочная работа;</li>
+              <li type="square">Бесплатные бизнес-ланчи, чай, кофе и др.;</li>
+              <li type="square">Ежегодный оплачиваемый отпуск продолжительностью 28 календарных дней;</li>
+              <li type="square">Оплачиваемые больничные;</li>
+              <li type="square">Молодой и целеустремленный коллектив.</li>
+            </ul>
+          </p>
+
+          <p><h2 style="text-align: left;">График работы: полный рабочий день</h2></p>
+      </div>
+    
+    </div>
+
+    
+  </div>
+  
+
+  
+  <div>
+    <form action="mailto:info@insolutions.work">
+    <input type="submit" value="Прислать своё резюме" class="w3-button w3-teal w3-padding-large"></input>
+  </form>
+  </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact" style="text-align: left;>
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Связаться с нами</span></div>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>  МОСКВА, РОССИЯ</p>
+      <!--<p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>  +7.....</p>-->
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>  info@insolutions.work</p>
+    </div>
+   <!-- <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Имя</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Электронная почта</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Сообщение</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>Мне нравится!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Отправить</button>
+      </form>
+    </div>-->
+    <div class="w3-col m5">
+      <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Поддержка</span>
+        <p style="text-align: justify;">В нашей службе поддержки клиентов рабоатет множество профессиональных носителей языка из разных стран, таких как Пакистан, Индия, Шри-Ланка и т. д.
+          Наша компания всегда на связи с Вами в любой части мира, чтобы предложить идеальное решение ваших проблем.</p>
+      </div>
+      </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Мы в социальных сетях</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Telegram"><i class="fa fa-telegram"></i></a>
+
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal1 = document.getElementById("myModal1");
+
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn1");
+  
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close1")[0];
+  
+
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal1.style.display = "block";
+    
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal1.style.display = "none";
+  
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal1) {
+      modal1.style.display = "none";
+    }
+   
+    
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal2 = document.getElementById("myModal2");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn2");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close2")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal2.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal2.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal2) {
+      modal2.style.display = "none";
+    }
+  }
+  </script>
+
+<script>
+  // Get the modal
+  var modal3 = document.getElementById("myModal3");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn3");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close3")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal3.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal3.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal3) {
+      modal3.style.display = "none";
+    }
+  }
+  </script>
+
+</body>
+</html>
